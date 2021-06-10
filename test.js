@@ -26,7 +26,7 @@ function a(m, n) {
 //     [1, 2, 0, 0, 0, 0, 0, 1, 0, 3, 1],
 //     [0, 1, 0, 0, 0, 0, 1, 3, 0, 0, 0]
 // ];
-//aiudgwyaugdiagwd
+//@nker Karlen
 
 var side = 20;
 var grassArr = []
