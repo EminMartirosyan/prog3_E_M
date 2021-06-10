@@ -27,6 +27,7 @@ function a(m, n) {
 //     [0, 1, 0, 0, 0, 0, 1, 3, 0, 0, 0]
 // ];
 //@nker Karlen
+//git teste teste
 
 var side = 20;
 var grassArr = []
