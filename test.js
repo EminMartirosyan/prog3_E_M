@@ -1,4 +1,4 @@
-//herllo
+//vanila
 function a(m, n) {
     var arr = [];
     for (var i = 0; i < m; i++) {
@@ -26,8 +26,7 @@ function a(m, n) {
 //     [1, 2, 0, 0, 0, 0, 0, 1, 0, 3, 1],
 //     [0, 1, 0, 0, 0, 0, 1, 3, 0, 0, 0]
 // ];
-//@nker Karlen
-//git teste teste
+
 
 var side = 20;
 var grassArr = []
