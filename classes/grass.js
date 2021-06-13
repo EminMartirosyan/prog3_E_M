@@ -14,21 +14,7 @@ class Grass extends Main {
                 }
             }
         }
-
         return found
-    }
-    mul() {
-        this.multiplay++
-        let found = this.chooseCell(0)
-        let exact = random(found)
-        if (exact && this.multiplay > 3) {
-            let x = exact[0]
-            let y = exact[1]
-            let grass1 = new Grass(x, y)
-            matrix[y][x] = 1
-            grassArr.push(grass1)
-            this.multiplay = 0
-        }
     }
 
 }

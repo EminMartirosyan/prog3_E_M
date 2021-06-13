@@ -105,9 +105,8 @@ frameRate(4)
         }
     }
     for (let i in grassArr) {
-        grassArr[i].mul()
-
-    }
+        grassArr[i].mul(3, Grass, 1, grassArr) 
+    } 
     for (let i in grassEaterArr) {
         grassEaterArr[i].eat()
 
