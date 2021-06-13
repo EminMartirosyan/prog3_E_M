@@ -1,9 +1,8 @@
 class GrassEater extends Main{
+   
     constructor(x, y) {
         super(x,y)
         this.energy = 20;
-        
-
     }
     
     chooseCell(character, character2,character3) {

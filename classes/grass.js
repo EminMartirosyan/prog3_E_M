@@ -2,9 +2,6 @@ class Grass extends Main {
     constructor(x, y) {
         super(x,y)
         this.multiplay = 0;
-      
-        
-
     }
     chooseCell(character) {
         var found = [];
