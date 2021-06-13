@@ -1,4 +1,4 @@
-class Poisoner{
+class Poisoner extends Main{
     constructor(x, y) {
         super(x,y)
         this.energy = 20;

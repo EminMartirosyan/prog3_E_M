@@ -1,4 +1,4 @@
-class Spider{
+class Spider extends Main{
     constructor(x, y) {
         super(x,y)
         this.energy = 19;
