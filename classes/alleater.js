@@ -1,4 +1,5 @@
-class AllEater extends Main{
+let Main = require('./main')
+module.exports = class AllEater extends Main{
     constructor(x, y) {
         super(x,y)
         this.energy = 21;

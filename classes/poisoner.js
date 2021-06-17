@@ -1,4 +1,5 @@
-class Poisoner extends Main{
+let Main = require('./main')
+module.exports =class Poisoner extends Main{
     constructor(x, y) {
         super(x,y)
         this.energy = 20;

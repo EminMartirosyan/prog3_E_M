@@ -69,7 +69,7 @@ function setup() {
 
 
 }
-function draw() {
+function nkaref() {
 frameRate(4)
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[y].length; x++) {
@@ -124,3 +124,4 @@ frameRate(4)
 
     }
 }
+setInterval(nkaref,1000)

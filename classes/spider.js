@@ -1,4 +1,5 @@
-class Spider extends Main{
+let Main = require('./main')
+module.exports =class Spider extends Main{
     constructor(x, y) {
         super(x,y)
         this.energy = 19;

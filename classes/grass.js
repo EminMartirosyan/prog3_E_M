@@ -1,4 +1,5 @@
-class Grass extends Main {
+let Main = require('./main')
+module.exports =class Grass extends Main {
     constructor(x, y) {
         super(x,y)
         this.multiplay = 0;

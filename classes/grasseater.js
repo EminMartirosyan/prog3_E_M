@@ -1,4 +1,5 @@
-class GrassEater extends Main{
+let Main = require('./main')
+module.exports =class GrassEater extends Main{
    
     constructor(x, y) {
         super(x,y)
