@@ -30,7 +30,7 @@ module.exports = class Main{
     mul(quantity, das, id, arr) {
         this.multiplay++
         let found = this.chooseCell(0)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if (exact && this.multiplay > quantity) {
             let x = exact[0]
             let y = exact[1]

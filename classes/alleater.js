@@ -23,7 +23,7 @@ module.exports = class AllEater extends Main{
     }
     eat(){
         let found = this.chooseCell(1, 2, 4, 5, 7)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy += 4
             let x = exact[0]
