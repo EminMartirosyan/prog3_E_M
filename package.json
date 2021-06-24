@@ -1,15 +1,12 @@
 {
-  "name": "prog3",
+  "name": "prog3_e_m",
   "version": "1.0.0",
-  "description": "dsde",
-  "main": "test.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^4.1.2"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/EminMartirosyan/prog3_E_M/issues"
   },
-  "homepage": "https://github.com/EminMartirosyan/prog3_E_M#readme"
+  "homepage": "https://github.com/EminMartirosyan/prog3_E_M#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }

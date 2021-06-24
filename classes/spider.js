@@ -23,7 +23,7 @@ module.exports =class Spider extends Main{
     }
     eat(){
         let found = this.chooseCell(1)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy += 2
             let x = exact[0]
@@ -52,7 +52,7 @@ module.exports =class Spider extends Main{
     }
     eat_sl(){
         let found = this.chooseCell(1,2,7)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy += 2
             let x = exact[0]
@@ -95,7 +95,7 @@ module.exports =class Spider extends Main{
     }
     move(){
         let found = this.chooseCell(0)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy -= 2
             let x = exact[0]
@@ -113,7 +113,7 @@ module.exports =class Spider extends Main{
     }
     move_sl(){
         let found = this.chooseCell(0)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy -= 2
             let x = exact[0]
@@ -131,7 +131,7 @@ module.exports =class Spider extends Main{
     }
     mul() {
         let found = this.chooseCell(0)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if (exact && this.energy > 27 ) {
             let x = exact[0]
             let y = exact[1]

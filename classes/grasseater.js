@@ -22,7 +22,7 @@ module.exports =class GrassEater extends Main{
     }
     mul() {
         let found = this.chooseCell(0)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if (exact && this.energy > 12) {
             let x = exact[0]
             let y = exact[1]
@@ -34,7 +34,7 @@ module.exports =class GrassEater extends Main{
     }
     eat(){
         let found = this.chooseCell(1,5,7)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy += 6
             let x = exact[0]
@@ -69,7 +69,7 @@ module.exports =class GrassEater extends Main{
     }
     move(){
         let found = this.chooseCell(0)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy -= 5
             let x = exact[0]

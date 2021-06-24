@@ -4,25 +4,28 @@ Spider = require("./classes/spider")
 Poisoner = require("./classes/poisoner")
 AllEater = require("./classes/alleater")
 
-var express = require('express');
-var app = express();
-var server = require('http').createServer(app);
-var io = require('socket.io')(server);
+ express = require('express')
+ app = express()
+ server = require('http').createServer(app)
+ io = require('socket.io')(server)
 
-var messages = [];
 
-app.use(express.static("."));
+app.use(express.static("."))
 
 app.get('/', function (req, res) {
-   res.redirect('test.html');
-});
+   res.redirect('./test.html')
+})
 
-server.listen(8080);function a(m, n) {
-var arr = [];
+server.listen(3000, ()=> {
+    console.log('connected')
+    
+})
+function a(m, n) {
+var arr = []
     for (var i = 0; i < m; i++) {
-        arr[i] = [];
+        arr[i] = []
         for (var j = 0; j < n; j++) {
-            arr[i][j] = Math.floor(Math.random() * 2);
+            arr[i][j] = Math.floor(Math.random() * 2)
         }
     }
     arr[m-2][n-4] = 2
@@ -35,14 +38,14 @@ var arr = [];
     arr[m-30][n-30] = 6
     return arr
 }
-var matrix = a(40,40)
+ matrix = a(40,40)
 io.sockets.emit('send matrix', matrix)
 
-var grassArr = []
-var grassEaterArr = [];
-var allEaterArr = [];
-var spiderArr = []
-var poisonArr = []
+ grassArr = []
+ grassEaterArr = []
+ allEaterArr = []
+ spiderArr = []
+ poisonArr = []
 
 
 

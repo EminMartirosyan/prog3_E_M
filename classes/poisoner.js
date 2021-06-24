@@ -24,7 +24,7 @@ module.exports =class Poisoner extends Main{
     }
     collect(){
         let found = this.chooseCell(1, 2, 4, 5)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             let x = exact[0]
             let y = exact[1]
@@ -49,7 +49,7 @@ module.exports =class Poisoner extends Main{
     }
     poison() {
         let found = this.chooseCell(1)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if (exact ) {
             let x = exact[0]
             let y = exact[1]
@@ -62,7 +62,7 @@ module.exports =class Poisoner extends Main{
     }
     move(){
         let found = this.chooseCell(0)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy -= 2
             let x = exact[0]
@@ -85,7 +85,7 @@ module.exports =class Poisoner extends Main{
     }
     move_sk(){
         let found = this.chooseCell(0)
-        let exact = random(found)
+        let exact = found[Math.floor(Math.random() * found.length)]
         if(exact){
             this.energy -= 2
             let x = exact[0]
