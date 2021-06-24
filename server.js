@@ -4,41 +4,43 @@ Spider = require("./classes/spider")
 Poisoner = require("./classes/poisoner")
 AllEater = require("./classes/alleater")
 
- express = require('express')
- app = express()
- server = require('http').createServer(app)
+ var express = require('express')
+ var app = express()
+ var server = require('http').createServer(app)
  io = require('socket.io')(server)
 
 
 app.use(express.static("."))
 
 app.get('/', function (req, res) {
-   res.redirect('./test.html')
+   res.redirect('index.html')
 })
 
 server.listen(3000, ()=> {
     console.log('connected')
-    
 })
+
+weath="winter";
+
+
+ matrix = []
 function a(m, n) {
-var arr = []
     for (var i = 0; i < m; i++) {
-        arr[i] = []
+        matrix[i] = []
         for (var j = 0; j < n; j++) {
-            arr[i][j] = Math.floor(Math.random() * 2)
+            matrix[i][j] = Math.floor(Math.random() * 2)
         }
     }
-    arr[m-2][n-4] = 2
-    arr[m-12][n-23] = 3
-    arr[m-38][n-27] = 2
-    arr[m-5][n-35] = 4
-    arr[m-10][n-10] = 6
-    arr[m-35][n-5] = 4
-    arr[m-22][n-2] = 4
-    arr[m-30][n-30] = 6
-    return arr
+    matrix[m-2][n-4] = 2
+    matrix[m-12][n-23] = 3
+    matrix[m-38][n-27] = 2
+    matrix[m-5][n-35] = 4
+    matrix[m-10][n-10] = 6
+    matrix[m-35][n-5] = 4
+    matrix[m-22][n-2] = 4
+    matrix[m-30][n-30] = 6
 }
- matrix = a(40,40)
+a(40,40)
 io.sockets.emit('send matrix', matrix)
 
  grassArr = []
@@ -46,10 +48,6 @@ io.sockets.emit('send matrix', matrix)
  allEaterArr = []
  spiderArr = []
  poisonArr = []
-
-
-
-
 
 function createObject(matrix){
     for (let y = 0; y < matrix.length; ++y) {

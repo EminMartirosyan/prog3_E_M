@@ -1,12 +1,10 @@
 var socket = io();
 var side = 20;
 function setup() {
-  
-    createCanvas(matrix[0].length * side + 1, matrix.length * side + 1);
+    createCanvas(40 * side + 1, 40 * side + 1);
     background('#acacac');
 }
-function nkaref() {
-  
+function nkaref(matrix) {
         for (var y = 0; y < matrix.length; y++) {
             for (var x = 0; x < matrix[y].length; x++) {
     
@@ -31,13 +29,8 @@ function nkaref() {
                  else if (matrix[y][x] == 7) {
                     fill("purple");
                 }
-    
                 rect(x * side, y * side, side, side);
-    
-    
                 fill("white")
-    
-    
             }
         }
     }
