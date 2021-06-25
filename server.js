@@ -7,7 +7,7 @@ AllEater = require("./classes/alleater")
  var express = require('express')
  var app = express()
  var server = require('http').createServer(app)
- io = require('socket.io')(server)
+ var io = require('socket.io')(server)
 
 
 app.use(express.static("."))
