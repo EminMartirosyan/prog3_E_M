@@ -8,6 +8,7 @@ AllEater = require("./classes/alleater")
  var app = express()
  var server = require('http').createServer(app)
  var io = require('socket.io')(server)
+ var fs = require("fs");
 
 
 app.use(express.static("."))
@@ -98,7 +99,62 @@ function game() {
     }
     io.sockets.emit('send matrix', matrix)
 }
+
+function addPoison() {
+    for (var i = 0; i < 7; i++) {
+    var x = Math.floor(Math.random() * matrix[0].length)
+    var y = Math.floor(Math.random() * matrix.length)
+        if (matrix[y][x] == 1) {
+            matrix[y][x] = 7
+            
+        }
+    }
+    io.sockets.emit("send matrix", matrix);
+}
+
+function kill() {
+    grassArr = [];
+    grassEaterArr = []
+    for (var y = 0; y < matrix.length; y++) {
+        for (var x = 0; x < matrix[y].length; x++) {
+            matrix[y][x] = 0;
+        }
+    }
+    io.sockets.emit("send matrix", matrix);
+}
+
+function weather() {
+    if (weath == "winter") {
+        weath = "spring"
+    }
+    else if (weath == "spring") {
+        weath = "summer"
+    }
+    else if (weath == "summer") {
+        weath = "autumn"
+    }
+    else if (weath == "autumn") {
+        weath = "winter"
+    }
+    io.sockets.emit('weather', weath)
+}
+setInterval(weather, 5000);
+
+
 setInterval(game,1000)
-io.on('connection', function (){
+
+
+io.on('connection', function (socket){
     createObject(matrix)
+    socket.on("add poison", addPoison);
+    socket.on("kill", kill);
 })
+var statistics = {};
+
+setInterval(function() {
+    statistics.grass = grassArr.length;
+    statistics.grassEater = grassEaterArr.length;
+    fs.writeFile("statistics.json", JSON.stringify(statistics), function(){
+        console.log("send")
+    })
+},1000)

@@ -4,12 +4,28 @@ function setup() {
     createCanvas(40 * side + 1, 40 * side + 1);
     background('#acacac');
 }
+let weath = 'summer'
+
+socket.on("weather", function (data) {
+    weath = data;
+    console.log(weath);
+    
+})
+
 function nkaref(matrix) {
         for (var y = 0; y < matrix.length; y++) {
             for (var x = 0; x < matrix[y].length; x++) {
     
                 if (matrix[y][x] == 1) {
-                    fill("green");
+                    if(weath == "summer") {
+                        fill("green");
+                    }else if (weath == "autumn") {
+                        fill("#333300");
+                    }else if (weath == "winter") {
+                        fill("lightgray");
+                    }else if (weath == "spring") {
+                        fill("#4dffa6");
+                    }
                 }
                 else if (matrix[y][x] == 0) {
                     fill("#acacac");
@@ -39,3 +55,10 @@ setInterval(
         socket.on('send matrix', nkaref)
     },1000
 )
+
+function addPoison() {
+    socket.emit("add poison")
+}
+function kill() {
+    socket.emit("kill")
+}
