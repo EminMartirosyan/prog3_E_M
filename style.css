@@ -1,0 +1,20 @@
+body{
+    background-color: darkgreen;
+}
+#defaultCanvas0{
+    margin-left: 500px;
+    border: 3px solid white;
+}
+button{
+    width:auto ;
+    height: 40px;
+    padding: 20px;
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    border:3px solid white;
+    margin-right: 20px;
+   
+
+}
