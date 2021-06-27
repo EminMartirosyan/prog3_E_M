@@ -1,20 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body{
-    background-color: darkgreen;
+    background-color: teal;
 }
 #defaultCanvas0{
-    margin-left: 500px;
+    margin-left: 540px;
     border: 3px solid white;
 }
-button{
-    width:auto ;
-    height: 40px;
-    padding: 20px;
-    background-color: transparent;
-    font-size: 20px;
-    text-align: center;
-    color: white;
-    border:3px solid white;
-    margin-right: 20px;
-   
 
+h1{
+    text-align: center; 
+    font-family: 'Raleway', sans-serif;
+    color :white;
 }
+
+/* .but {
+    position: relative;
+  width: 180px;
+  height: 60px;
+  margin: 20px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: saddlebrown;
+  transition: 0.5s;
+  border: 1px solid orange;
+}
+
+.but:hover {
+    border: 1px solid transparent;
+    background: lightblue url(https://i.postimg.cc/wBXGXbWN/pixel.png); 
+    transition-delay: 0.8s;
+    background-size: 180px;
+    animation: animate 0,8s steps(8) forwards;
+}
+
+.but:last-of-type {
+    border: 1px solid purple
+}
+
+.but:last-of-type:hover {
+    background: purple url(https://i.postimg.cc/FzBWFtKM/pixel2.png);
+}
+@keyframes animate {
+    0% {
+        background-position-y: 0;
+   }
+    100% {
+        background-position-y: -480px;
+   } */
+   button {
+    margin: 20px;
+    outline: none;
+  }
+  .custom-btn {
+    width: 150px;
+    height: 60px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+   .btn-5 {
+    background: #000;
+    color: #fff;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-5:hover {
+    background: white;
+    color: #000;
+     box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #000;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  #header{
+      margin-left: 490px;
+  }

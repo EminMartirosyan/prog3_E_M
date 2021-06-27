@@ -10,17 +10,24 @@
     <script src="socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
     <script src="./test.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 
 </head>
 <body>
+   <h1>Idiot game</h1>
+    <div id="header">
+        <!-- <button onclick="addPoison()">poison</button>
     
-            <button onclick="addPoison()">poison</button>
+        <button onclick="kill()">Kill</button> -->
         
-       
-    
-            <button onclick="kill()">Kill</button>
+        <button class="custom-btn btn-5" onclick="addPoison()" class="custom-btn btn-5"><span>Poison</span></button>
+        <button class="custom-btn btn-5" onclick="addAllEater()" class="custom-btn btn-5"><span>Add killer</span></button>
+        <button class="custom-btn btn-5" onclick="addGrass()" class="custom-btn btn-5"><span>Grassss</span></button>
+        <button class="custom-btn btn-5" onclick="addGrassEater()" class="custom-btn btn-5"><span>Add meat</span></button>
+        <button class="custom-btn btn-5" onclick="kill()" class="custom-btn btn-5"><span>Kill</span></button>
         
-    
-
+    </div>
 </body>
 </html>

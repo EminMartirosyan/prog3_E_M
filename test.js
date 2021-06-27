@@ -62,3 +62,12 @@ function addPoison() {
 function kill() {
     socket.emit("kill")
 }
+function addGrass() {
+    socket.emit("add grass")
+}
+function addGrassEater() {
+    socket.emit("add grassEater")
+}
+function addAllEater() {
+    socket.emit("add allEater")
+}
